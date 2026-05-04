@@ -1,0 +1,174 @@
+\chapter{Project Schedule}
+
+This section provides an overview of the planned activities and timeline for the project.
+
+\begin{landscape}
+
+\begin{figure}
+\centering\resizebox{\linewidth}{!}{
+\begin{ganttchart}[
+    hgrid,
+    vgrid,
+    x unit=0.5cm,
+    y unit chart=0.9cm,
+    bar label node/.append style={
+        text width=3.7cm,
+        align=left,
+        font=\small\linespread{0.6}\selectfont
+    },
+    group label node/.append style={
+        text width=3.7cm,
+        align=left,
+        font=\bfseries\linespread{0.6}\selectfont
+    },
+    milestone label node/.append style={
+        text width=3.7cm,
+        align=left,
+    }
+]{1}{50}
+
+% ---- Months ----
+\gantttitle{2026}{50} \\
+
+\gantttitle{Jan}{3}
+\gantttitle{Feb}{4}
+\gantttitle{Mar}{4}
+\gantttitle{Apr}{4}
+\gantttitle{May}{5}
+\gantttitle{Jun}{4}
+\gantttitle{Jul}{5}
+\gantttitle{Aug}{4}
+\gantttitle{Sep}{4}
+\gantttitle{Oct}{5}
+\gantttitle{Nov}{4}
+\gantttitle{Dec}{4} \\
+
+% ---- Week numbers ----
+\gantttitlelist
+{16,23,30,
+ 6,13,20,27,
+ 6,13,20,27,
+ 3,10,17,24,
+ 1,8,15,22,29,
+ 5,12,19,26,
+ 3,10,17,24,31,
+ 7,14,21,28,
+ 4,11,18,25,
+ 2,9,16,23,30,
+ 6,13,20,27,
+ 4,11,18,25}{1} \\
+
+% ---- Task bars ----
+\ganttgroup{3.1 Research}{2}{23} \\
+\ganttbar{3.1.1 Literature Review}{2}{23} \\
+\ganttbar{3.1.2 Comparison of current implementations}{6}{14} \\
+\ganttmilestone[name=MS1]{Project proposal (15 May)}{17} \\
+
+\ganttgroup{3.2 Concept Definition}{9}{25} \\
+\ganttbar{3.2.1 Aim and Objectives}{9}{11} \\
+\ganttbar{3.2.2 Stakeholder requirements}{12}{14} \\
+\ganttbar{3.2.3 Engineering Requirements}{15}{17} \\
+\ganttbar{3.2.4 Drone Selection}{16}{20} \\
+\ganttbar{3.2.5 Software selection}{21}{25} \\
+
+\ganttgroup{3.3 System Architecture Design}{26}{48} \\
+\ganttbar{3.3.1 Model Selection}{26}{36} \\
+\ganttbar{3.3.2 Model Development}{29}{41} \\
+\ganttbar{3.3.3 Model Optimisation}{42}{48} \\
+
+\ganttgroup{3.4 Prototype }{32}{49} \\
+\ganttbar{3.4.1 Hardware Selection}{32}{35} \\
+\ganttbar{3.4.2 Assembly}{35}{39} \\
+\ganttbar{3.4.3 Hardware testing}{38}{41} \\
+\ganttbar{3.4.4 Data Collection Protocol}{42}{43} \\
+\ganttbar{3.4.5 Software Implementation}{44}{49} \\
+
+\ganttbar{\textbf{3.4 Documentation}}{4}{49}
+
+\ganttlink[link mid=0.75]{elem5}{elem6}
+\ganttlink{elem6}{elem7}
+\ganttlink{elem8}{elem9}
+\ganttlink{elem9}{elem11}
+\ganttlink{elem12}{elem13}
+\ganttlink{elem17}{elem18}
+\ganttlink{elem18}{elem19}
+
+\end{ganttchart}}
+\caption{Gantt Chart 2026}
+\label{fig:gantt2026}
+\end{figure}
+
+\begin{figure}
+\centering\resizebox{\linewidth}{!}{
+\begin{ganttchart}[
+    hgrid,
+    vgrid,
+    x unit=0.5cm,
+    y unit chart=0.9cm,
+    bar label node/.append style={
+        text width=3.7cm,
+        align=left,
+        font=\small\linespread{0.6}\selectfont
+    },
+    group label node/.append style={
+        text width=3.7cm,
+        align=left,
+        font=\bfseries\linespread{0.6}\selectfont
+    },
+    milestone label node/.append style={
+        text width=3.7cm,
+        align=left,
+    }
+]{1}{39}
+
+% ---- Months ----
+\gantttitle{2027}{39} \\
+
+\gantttitle{Jan}{5}
+\gantttitle{Feb}{4}
+\gantttitle{Mar}{4}
+\gantttitle{Apr}{5}
+\gantttitle{May}{4}
+\gantttitle{Jun}{4}
+\gantttitle{Jul}{5}
+\gantttitle{Aug}{4}
+\gantttitle{Sep}{4} \\
+
+% ---- Week numbers ----
+\gantttitlelist
+{1,8,15,22,29,
+ 5,12,19,26,
+ 5,12,19,26,
+ 2,9,16,23,30,
+ 7,14,21,28,
+ 4,11,18,25,
+ 2,9,16,23,30,
+ 6,13,20,27,
+ 3,10,17,24}{1} \\
+
+% ---- Task bars ----
+\ganttgroup{3.4 Prototype }{1}{31} \\
+\ganttbar{3.4.5 Software Implementation}{1}{1} \\
+\ganttbar{3.4.6 Software evaluation}{2}{6} \\
+\ganttbar{System implementation}{7}{16} \\ 
+\ganttbar{Ethics approval }{17}{20} \\ 
+\ganttbar{User testing}{21}{24} \\
+\ganttbar{Result analysis}{24}{34} \\
+
+
+\ganttbar[name=documentation]{\textbf{3.4 Documentation}}{1}{37} \\
+
+\ganttmilestone[name=MS2]{Thesis hand-in (10 Sep)}{37}
+
+\ganttlink{elem1}{elem2}
+\ganttlink{elem2}{elem3}
+\ganttlink{elem3}{elem4}
+\ganttlink{elem4}{elem5}
+\ganttlink[link type=f-m]{documentation}{MS2}
+
+\end{ganttchart}}
+\caption{Gantt Chart 2027}
+\label{fig:gantt2027}
+\end{figure}
+
+\end{landscape}

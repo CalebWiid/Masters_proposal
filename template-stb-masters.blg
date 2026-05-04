@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: template-stb-masters.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+The style file: stb-bib-eng-a.bst
+Reallocating 'name_of_file' (item size: 1) to 30 items.
+A level-1 auxiliary file: chaps-front/chap-abstract.aux
+Reallocating 'name_of_file' (item size: 1) to 33 items.
+A level-1 auxiliary file: chaps-front/chap-acknowledge.aux
+Reallocating 'name_of_file' (item size: 1) to 32 items.
+A level-1 auxiliary file: chaps-front/chap-dedication.aux
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+A level-1 auxiliary file: chaps-main/chap-intro.aux
+Reallocating 'name_of_file' (item size: 1) to 31 items.
+A level-1 auxiliary file: chaps-main/chap-literature.aux
+Reallocating 'name_of_file' (item size: 1) to 29 items.
+A level-1 auxiliary file: chaps-main/chap-workplan.aux
+Reallocating 'name_of_file' (item size: 1) to 29 items.
+A level-1 auxiliary file: chaps-main/chap-schedule.aux
+Reallocating 'name_of_file' (item size: 1) to 36 items.
+A level-1 auxiliary file: chaps-main/chap-risk_assessment.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+Database file #1: bib/bib-reference.bib
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 22 entries,
+            3324 wiz_defined-function locations,
+            821 strings with 10610 characters,
+and the built_in function-call counts, 23571 in all, are:
+= -- 1887
+> -- 644
+< -- 45
++ -- 253
+- -- 225
+* -- 2324
+:= -- 2823
+add.period$ -- 85
+call.type$ -- 22
+change.case$ -- 185
+chr.to.int$ -- 22
+cite$ -- 22
+duplicate$ -- 2316
+empty$ -- 2139
+format.name$ -- 441
+if$ -- 4844
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 262
+newline$ -- 149
+num.names$ -- 88
+pop$ -- 567
+preamble$ -- 1
+purify$ -- 163
+quote$ -- 0
+skip$ -- 575
+stack$ -- 0
+substring$ -- 1538
+swap$ -- 1171
+text.length$ -- 37
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 198
+warning$ -- 0
+while$ -- 204
+width$ -- 0
+write$ -- 339

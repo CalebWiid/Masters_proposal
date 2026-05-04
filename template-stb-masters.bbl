@@ -1,0 +1,250 @@
+\begin{thebibliography}{22}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\edef\AFRstr{\string afrikaans}
+\ifx\AFRstr\languagename
+   \input{stb-bib.afr}%
+ \else
+   \input{stb-bib.eng}%
+\fi
+\newcommand{\Capitalize}[1]{\uppercase{#1}}
+\newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{{Anuja Phapale}} \protect\BIBand{}
+  \citenamefont{{Shriya Sawashe}}(2024)}]{Anjua2024}
+\bibnamefont{{Anuja Phapale}} \protect\BIBand{} \bibnamefont{{Shriya Sawashe}}
+  (2024 \bbljan{}).
+\newblock {{3D Motion Gesture Control}} : {{Gesture Recognition}} and
+  {{Adaptation}} for {{Human Computer Interaction}}.
+\newblock \emph{International Journal of Applied and Advanced Multidisciplinary
+  Research}, \bblvol{}~2, \bblno{}~1, \bblpp{} 23--30.
+\newblock ISSN 3026-2437.
+
+\bibitem[{\citenamefont{Bhushan} \emph{\bbletal{}}(2022)\citenamefont{Bhushan},
+  \citenamefont{Alshehri}, \citenamefont{Keshta}, \citenamefont{Chakraverti},
+  \citenamefont{Rajpurohit} \protect\BIBand{}
+  \citenamefont{Abugabah}}]{bhushan2022}
+\bibnamefont{Bhushan}, \bibfnamefont{S.}, \bibnamefont{Alshehri},
+  \bibfnamefont{M.}, \bibnamefont{Keshta}, \bibfnamefont{I.},
+  \bibnamefont{Chakraverti}, \bibfnamefont{A.K.}, \bibnamefont{Rajpurohit},
+  \bibfnamefont{J.} \protect\BIBand{} \bibnamefont{Abugabah}, \bibfnamefont{A.}
+  (2022 \bblmar{}).
+\newblock An {{Experimental Analysis}} of {{Various Machine Learning
+  Algorithms}} for {{Hand Gesture Recognition}}.
+\newblock \emph{Electronics}, \bblvol{}~11, \bblno{}~6, \bblp{} 968.
+\newblock ISSN 2079-9292.
+
+\bibitem[{\citenamefont{Cabrera} \emph{\bbletal{}}(2017)\citenamefont{Cabrera},
+  \citenamefont{{Sanchez-Tamayo}}, \citenamefont{Voyles} \protect\BIBand{}
+  \citenamefont{Wachs}}]{Cabrera2017}
+\bibnamefont{Cabrera}, \bibfnamefont{M.E.}, \bibnamefont{{Sanchez-Tamayo}},
+  \bibfnamefont{N.}, \bibnamefont{Voyles}, \bibfnamefont{R.} \protect\BIBand{}
+  \bibnamefont{Wachs}, \bibfnamefont{J.P.} (2017 \bblmay{}).
+\newblock One-{{Shot Gesture Recognition}}: {{One Step Towards Adaptive
+  Learning}}.
+\newblock \capitalize\bblin{}: \emph{2017 12th {{IEEE International
+  Conference}} on {{Automatic Face}} \& {{Gesture Recognition}} ({{FG}} 2017)},
+  \bblpp{} 784--789. IEEE, Washington, DC, DC, USA.
+\newblock ISBN 978-1-5090-4023-0.
+
+\bibitem[{\citenamefont{{DJI}}(2026)}]{DJI_Neo2_Manual}
+\bibnamefont{{DJI}} (2026).
+\newblock {\selectlanguage{English}\emph{DJI Neo 2 User Manual}}.
+\newblock Accessed: 2026-03-30.
+\newline\bblurlpre\url{https://ne.manuals.plus/wp-content/uploads/2026/01/DJI_Neo_2_User_Manual_v1.0_en.pdf}
+
+\bibitem[{\citenamefont{{Escalera, Sergio}}(2017)}]{Esclara2017}
+\bibnamefont{{Escalera, Sergio}}, \bibfnamefont{{Guyon, Isabelle}, A.} (2017).
+\newblock Challenges in {{Machine Learning}}.
+\newblock \emph{Challenges in Machine Learning}.
+
+\bibitem[{\citenamefont{Gio} \emph{\bbletal{}}(2021)\citenamefont{Gio},
+  \citenamefont{Brisco} \protect\BIBand{} \citenamefont{Vuletic}}]{Gio2021}
+\bibnamefont{Gio}, \bibfnamefont{N.}, \bibnamefont{Brisco}, \bibfnamefont{R.}
+  \protect\BIBand{} \bibnamefont{Vuletic}, \bibfnamefont{T.} (2021 \bblaug{}).
+\newblock {{CONTROL OF A DRONE WITH BODY GESTURES}}.
+\newblock \emph{Proceedings of the Design Society}, \bblvol{}~1, \bblpp{}
+  761--770.
+\newblock ISSN 2732-527X.
+
+\bibitem[{\citenamefont{Jiashan} \protect\BIBand{}
+  \citenamefont{Zhonghua}(2024)}]{jiashan2024}
+\bibnamefont{Jiashan}, \bibfnamefont{L.} \protect\BIBand{}
+  \bibnamefont{Zhonghua}, \bibfnamefont{L.} (2024).
+\newblock Dynamic {{Gesture Recognition Algorithm Combining Global Gesture
+  Motion}} and {{Local Finger Motion}} for {{Interactive Teaching}}.
+\newblock \emph{IEEE Access}, \bblvol{}~12, \bblpp{} 128117--128128.
+\newblock ISSN 2169-3536.
+
+\bibitem[{\citenamefont{Khaksar} \emph{\bbletal{}}(2023)\citenamefont{Khaksar},
+  \citenamefont{Checker}, \citenamefont{Borazjan} \protect\BIBand{}
+  \citenamefont{Murray}}]{Khaksar2023}
+\bibnamefont{Khaksar}, \bibfnamefont{S.}, \bibnamefont{Checker},
+  \bibfnamefont{L.}, \bibnamefont{Borazjan}, \bibfnamefont{B.}
+  \protect\BIBand{} \bibnamefont{Murray}, \bibfnamefont{I.} (2023 \bbljun{}).
+\newblock Design and {{Evaluation}} of an {{Alternative Control}} for a
+  {{Quad-Rotor Drone Using Hand-Gesture Recognition}}.
+\newblock \emph{Sensors}, \bblvol{}~23, \bblno{}~12.
+\newblock ISSN 1424-8220.
+
+\bibitem[{\citenamefont{Kumar} \emph{\bbletal{}}(2020)\citenamefont{Kumar},
+  \citenamefont{Jain}, \citenamefont{Rodrigues}, \citenamefont{Dsouza}
+  \protect\BIBand{} \citenamefont{Pooja}}]{Kumar2020}
+\bibnamefont{Kumar}, \bibfnamefont{S.}, \bibnamefont{Jain}, \bibfnamefont{A.},
+  \bibnamefont{Rodrigues}, \bibfnamefont{C.A.}, \bibnamefont{Dsouza},
+  \bibfnamefont{G.S.} \protect\BIBand{} \bibnamefont{Pooja}, \bibfnamefont{N.}
+  (2020 \bbldec{}).
+\newblock Gesture control of {{UAV}} using radio frequency.
+\newblock \emph{AIP Conference Proceedings}, \bblvol{} 2311, \bblno{}~1,
+  \bblp{} 060003.
+\newblock ISSN 0094-243X.
+
+\bibitem[{\citenamefont{Mehta} \emph{\bbletal{}}(2023)\citenamefont{Mehta},
+  \citenamefont{Jituri}, \citenamefont{Vendamurthy} \protect\BIBand{}
+  \citenamefont{Ezhilmaran}}]{Mehta2023}
+\bibnamefont{Mehta}, \bibfnamefont{D.}, \bibnamefont{Jituri},
+  \bibfnamefont{V.}, \bibnamefont{Vendamurthy} \protect\BIBand{}
+  \bibnamefont{Ezhilmaran} (2023 \bblmay{}).
+\newblock {{GESTURE CONTROLLED DRONE}}.
+\newblock \emph{{International Journal of Advanced Research in Computer and
+  Communication Engineering}}, \bblvol{}~12.
+\newblock ISSN 2278-1021.
+
+\bibitem[{\citenamefont{M{\"u}ezzino{\u g}lu} \protect\BIBand{}
+  \citenamefont{Karak{\"o}se}(2021)}]{muezzinoglu2021}
+\bibnamefont{M{\"u}ezzino{\u g}lu}, \bibfnamefont{T.} \protect\BIBand{}
+  \bibnamefont{Karak{\"o}se}, \bibfnamefont{M.} (2021 \bblmar{}).
+\newblock An {{Intelligent Human}}--{{Unmanned Aerial Vehicle Interaction
+  Approach}} in {{Real Time Based}} on {{Machine Learning Using Wearable
+  Gloves}}.
+\newblock \emph{Sensors}, \bblvol{}~21, \bblno{}~5, \bblp{} 1766.
+\newblock ISSN 1424-8220.
+
+\bibitem[{\citenamefont{Nogales} \protect\BIBand{}
+  \citenamefont{Benalc{\'a}zar}(2023)}]{nogales2023}
+\bibnamefont{Nogales}, \bibfnamefont{R.E.} \protect\BIBand{}
+  \bibnamefont{Benalc{\'a}zar}, \bibfnamefont{M.E.} (2023 \bblsep{}).
+\newblock Analysis and {{Evaluation}} of {{Feature Selection}} and {{Feature
+  Extraction Methods}}.
+\newblock \emph{International Journal of Computational Intelligence Systems},
+  \bblvol{}~16, \bblno{}~1, \bblp{} 153.
+\newblock ISSN 1875-6883.
+
+\bibitem[{\citenamefont{Patrona} \emph{\bbletal{}}(2021)\citenamefont{Patrona},
+  \citenamefont{Mademlis} \protect\BIBand{} \citenamefont{Pitas}}]{Patrona2021}
+\bibnamefont{Patrona}, \bibfnamefont{F.}, \bibnamefont{Mademlis},
+  \bibfnamefont{I.} \protect\BIBand{} \bibnamefont{Pitas}, \bibfnamefont{I.}
+  (2021 \bbloct{}).
+\newblock An {{Overview}} of {{Hand Gesture Languages}} for {{Autonomous UAV
+  Handling}}.
+\newblock \capitalize\bblin{}: \emph{2021 {{Aerial Robotic Systems Physically
+  Interacting}} with the {{Environment}} ({{AIRPHARO}})}, \bblpp{} 1--7. IEEE,
+  Biograd na Moru, Croatia.
+\newblock ISBN 978-1-6654-3389-1.
+
+\bibitem[{\citenamefont{Reyes} \emph{\bbletal{}}(2023)\citenamefont{Reyes},
+  \citenamefont{Gomaa} \protect\BIBand{} \citenamefont{Feld}}]{Reyes2023}
+\bibnamefont{Reyes}, \bibfnamefont{G.}, \bibnamefont{Gomaa}, \bibfnamefont{A.}
+  \protect\BIBand{} \bibnamefont{Feld}, \bibfnamefont{M.} (2023 \bblsep{}).
+\newblock It's all about you: {{Personalized}} in-{{Vehicle Gesture
+  Recognition}} with a {{Time-of-Flight Camera}}.
+\newblock \capitalize\bblin{}: \emph{Proceedings of the 15th {{International
+  Conference}} on {{Automotive User Interfaces}} and {{Interactive Vehicular
+  Applications}}}, \bblpp{} 234--243. ACM, Ingolstadt Germany.
+\newblock ISBN 979-8-4007-0105-4.
+
+\bibitem[{\citenamefont{{RTI International}}(2023)}]{Natural_UI}
+\bibnamefont{{RTI International}} (2023).
+\newblock Natural user interrfaces and smart personalization.
+\newblock
+  https://www.rti.org/brochures/natural-user-interfaces-and-smart-personalization-lab-58-technology-research-brief.
+
+\bibitem[{\citenamefont{Sarkar} \emph{\bbletal{}}(2016)\citenamefont{Sarkar},
+  \citenamefont{Patel}, \citenamefont{Ganesh~Ram} \protect\BIBand{}
+  \citenamefont{Capoor}}]{Sarkar2016}
+\bibnamefont{Sarkar}, \bibfnamefont{A.}, \bibnamefont{Patel},
+  \bibfnamefont{K.A.}, \bibnamefont{Ganesh~Ram}, \bibfnamefont{R.}
+  \protect\BIBand{} \bibnamefont{Capoor}, \bibfnamefont{G.K.} (2016 \bblmar{}).
+\newblock Gesture control of drone using a motion controller.
+\newblock \capitalize\bblin{}: \emph{2016 {{International Conference}} on
+  {{Industrial Informatics}} and {{Computer Systems}} ({{CIICS}})}, \bblpp{}
+  1--5.
+
+\bibitem[{\citenamefont{{ScienceDirect}}(2026)}]{HRI_sciencedirect}
+\bibnamefont{{ScienceDirect}} (2026).
+\newblock Human {{Robot Interaction}} - an overview \textbar{} {{ScienceDirect
+  Topics}}.
+\newblock
+  https://www.sciencedirect.com/topics/computer-science/human-robot-interaction.
+
+\bibitem[{\citenamefont{Shahi} \emph{\bbletal{}}(2024)\citenamefont{Shahi},
+  \citenamefont{Mollyn}, \citenamefont{Park}, \citenamefont{Kang},
+  \citenamefont{Liberman}, \citenamefont{Levy}, \citenamefont{Gong},
+  \citenamefont{Bedri} \protect\BIBand{} \citenamefont{Laput}}]{Shahi2024}
+\bibnamefont{Shahi}, \bibfnamefont{S.}, \bibnamefont{Mollyn},
+  \bibfnamefont{V.}, \bibnamefont{Park}, \bibfnamefont{C.T.},
+  \bibnamefont{Kang}, \bibfnamefont{R.}, \bibnamefont{Liberman},
+  \bibfnamefont{A.}, \bibnamefont{Levy}, \bibfnamefont{O.}, \bibnamefont{Gong},
+  \bibfnamefont{J.}, \bibnamefont{Bedri}, \bibfnamefont{A.} \protect\BIBand{}
+  \bibnamefont{Laput}, \bibfnamefont{G.} (2024 \bbloct{}).
+\newblock Vision-{{Based Hand Gesture Customization}} from a {{Single
+  Demonstration}}.
+\newblock \capitalize\bblin{}: \emph{Proceedings of the 37th {{Annual ACM
+  Symposium}} on {{User Interface Software}} and {{Technology}}}, \bblpp{}
+  1--14.
+\newblock \eprint{2402.08420}.
+
+\bibitem[{\citenamefont{Taylor} \emph{\bbletal{}}(2025)\citenamefont{Taylor},
+  \citenamefont{Allen}, \citenamefont{Henson}, \citenamefont{Gao},
+  \citenamefont{Malik} \protect\BIBand{} \citenamefont{Zhu}}]{Taylor2025}
+\bibnamefont{Taylor}, \bibfnamefont{B.}, \bibnamefont{Allen},
+  \bibfnamefont{M.}, \bibnamefont{Henson}, \bibfnamefont{P.},
+  \bibnamefont{Gao}, \bibfnamefont{X.}, \bibnamefont{Malik}, \bibfnamefont{H.}
+  \protect\BIBand{} \bibnamefont{Zhu}, \bibfnamefont{P.} (2025 \bbljun{}).
+\newblock Enhancing {{Drone Navigation}} and {{Control}}: {{Gesture-Based
+  Piloting}}, {{Obstacle Avoidance}}, and {{3D Trajectory Mapping}}.
+\newblock \emph{Applied Sciences}, \bblvol{}~15, \bblno{}~13, \bblp{} 7340.
+\newblock ISSN 2076-3417.
+
+\bibitem[{\citenamefont{Trinitatova}
+  \emph{\bbletal{}}(2025)\citenamefont{Trinitatova}, \citenamefont{Shevelo}
+  \protect\BIBand{} \citenamefont{Tsetserukou}}]{Trinitatova2025}
+\bibnamefont{Trinitatova}, \bibfnamefont{D.}, \bibnamefont{Shevelo},
+  \bibfnamefont{S.} \protect\BIBand{} \bibnamefont{Tsetserukou},
+  \bibfnamefont{D.} (2025 \bblmar{}).
+\newblock Towards {{Intuitive Drone Operation Using}} a {{Handheld Motion
+  Controller}}.
+\newblock \capitalize\bblin{}: \emph{2025 20th {{ACM}}/{{IEEE International
+  Conference}} on {{Human-Robot Interaction}} ({{HRI}})}, \bblpp{} 1690--1694.
+
+\bibitem[{\citenamefont{Yun} \emph{\bbletal{}}(2024)\citenamefont{Yun},
+  \citenamefont{Kwak} \protect\BIBand{} \citenamefont{Kim}}]{Yun2024}
+\bibnamefont{Yun}, \bibfnamefont{G.}, \bibnamefont{Kwak}, \bibfnamefont{H.}
+  \protect\BIBand{} \bibnamefont{Kim}, \bibfnamefont{D.H.} (2024 \bblnov{}).
+\newblock Single-{{Handed Gesture Recognition}} with {{RGB Camera}} for {{Drone
+  Motion Control}}.
+\newblock \emph{Applied Sciences}, \bblvol{}~14, \bblno{}~22, \bblp{} 10230.
+\newblock ISSN 2076-3417.
+
+\bibitem[{\citenamefont{Zhao} \emph{\bbletal{}}(2018)\citenamefont{Zhao},
+  \citenamefont{Luo}, \citenamefont{Song}, \citenamefont{Chen},
+  \citenamefont{Lu} \protect\BIBand{} \citenamefont{Wu}}]{Zhao2018}
+\bibnamefont{Zhao}, \bibfnamefont{Z.}, \bibnamefont{Luo}, \bibfnamefont{H.},
+  \bibnamefont{Song}, \bibfnamefont{G.-H.}, \bibnamefont{Chen},
+  \bibfnamefont{Z.}, \bibnamefont{Lu}, \bibfnamefont{Z.-M.} \protect\BIBand{}
+  \bibnamefont{Wu}, \bibfnamefont{X.} (2018 \bbljan{}).
+\newblock Web-based interactive drone control using hand gesture.
+\newblock \emph{Review of Scientific Instruments}, \bblvol{}~89, \bblno{}~1,
+  \bblp{} 014707.
+\newblock ISSN 0034-6748.
+
+\end{thebibliography}

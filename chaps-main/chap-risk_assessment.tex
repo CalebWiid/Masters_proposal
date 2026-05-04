@@ -1,0 +1,85 @@
+\chapter{Risk Assessment}
+\noindent This section presents a risk assessment for the development, assembly, and testing of the gesture-controlled drone system. Potential hazards associated with each activity are identified and classified according to their impact on personal safety (P), equipment (E), or both. Appropriate mitigation strategies are proposed to reduce the likelihood and severity of each risk. The assessment follows a proactive approach, ensuring that safety, regulatory compliance, and system reliability are considered throughout all stages of the project.
+
+{
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}p{0.25\textwidth}|>{\centering\arraybackslash}p{1.2cm}|>{\raggedright\arraybackslash}p{0.25\textwidth}|>{\centering\arraybackslash}p{2.0cm}|}
+\caption{Risk assessment for gesture-controlled drone system.} \\
+\hline
+\rowcolor{gray!30}
+\textbf{Activity} & \textbf{Risk} & \textbf{Risk Type* (P/E)} & \textbf{Mitigation} & \textbf{Risk Severity} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{gray!30}
+\textbf{Activity} & \textbf{Risk} & \textbf{Risk Type* (P/E)} & \textbf{Mitigation} & \textbf{Risk Severity} \\
+\hline
+\endhead
+
+\hline \multicolumn{5}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+
+% ---------------- GENERAL ----------------
+\multicolumn{5}{|l|}{\textbf{General}} \\
+\hline
+Ethics approval & Delay in approval prevents user testing & E & Submit ethics application early, ideally during concept phase & High \\
+\hline
+Flight operations & Flying without permits and breaches of regulations & P \& E & Identify regulations and obtain permits before flight & High \\
+\hline
+Hardware procurement & Delays in components delay entire project & E & Order early and identify backup suppliers. Additionally, purchase spare parts to account for faulty or damaged components & High \\
+\hline
+Battery storage & Fire risk from incorrect LiPo storage & P \& E & Store in LiPo bag and use approved chargers. Have an appropriate fire extinguisher near in the labs where the batteries are stored & High \\
+\hline
+
+% ---------------- SOFTWARE ----------------
+\multicolumn{5}{|l|}{\textbf{Software}} \\
+\hline
+Gesture control & Misclassification causes unintended motion & P \& E & Implement kill switch and test in simulation first & High \\
+\hline
+Model optimisation & Excessive tuning delays project & E & Define stopping criteria and time-box optimisation & Medium \\
+\hline
+Data collection & Data loss or corruption during testing & E & Backup data regularly and save to multiple devices & Medium \\
+\hline
+
+% ---------------- ASSEMBLY ----------------
+\multicolumn{5}{|l|}{\textbf{Assembly}} \\
+\hline
+Soldering & Burns or inhalation of fumes & P & Work in ventilated area and use proper handling & Low \\
+\hline
+Electronics handling & Damage from electrostatic discharge or overcharge & E & Ensure all components are grounded properly and power components at rated voltage and current settings & Low \\
+\hline
+Electrical connections & Shock from live wiring & P & Disconnect power before modifications & Medium \\
+\hline
+Battery handling & Fire from damaged LiPo battery & P \& E & Inspect batteries and avoid short circuits. Have quick access to appropriate fire extinguisher & High \\
+\hline
+Drone assembly & Cuts from sharp edges & P & Where appropriate personal protective equipment and sand sharp edges & Low \\
+\hline
+Tool use & Injury from slipping tools & P & Use correct tools and secure workpiece. Get appropriate training if needed & Low \\
+\hline
+Workbench & Accidents due to clutter & P \& E & Maintain clean and organised workspace & Low \\
+\hline
+
+% ---------------- TESTING ----------------
+\multicolumn{5}{|l|}{\textbf{Testing}} \\
+\hline
+Initial flight tests & Collision with people or objects & P \& E & Use safety zone, prop guards, and spotter & High \\
+\hline
+User testing & Injury due to incorrect gesture response & P \& E & Maintain safe distance and manual override & High \\
+\hline
+Outdoor testing & Loss of control (flyaway) & P \& E & Use RC override and test in enclosed areas & High \\
+\hline
+Environmental conditions & Wind or obstacles cause collision & P & Take precautions to plan tests to mitigate environmental interference. & Medium \\
+\hline
+Pre-flight checks & Battery failure causes crash & P & Inspect and monitor batteries before flight & High \\
+\hline
+Hardware failure & Loss of vision/processing mid-flight & P \& E & Implement watchdog and pre-flight checks & Medium \\
+\hline
+
+\end{longtable}
+
+\par\medskip\noindent\textit{*P -- Personal, E -- Equipment}
+}

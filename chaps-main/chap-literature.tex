@@ -1,0 +1,342 @@
+\chapter{Literature review}
+This chapter will discuss the current state of the art technology that incorporates gesture recognition to control a drone movement. There are a number of different techniques to implement this and they will be discussed. Additionally different learning algorithims used to recognise and catagorise gestures will be discussed. 
+
+\section{Types of Gesture Control}
+\subsection{Image-Based vs Non-Image-Based Gesture Recognition}
+According to \cite{Khaksar2023} there are two general approaches when it comes to gesture recognition and data acquisition: image-based and non-image-based approaches. The image-based approach can be further categorised into three main subcategories which include depth camera detection, stereo camera detection and single camera detection as shown in \ref{fig:gesture_sensors}. This approach makes use of cameras to capture a gesture and then using feature extraction transforms this information into usable data that a system can use.
+
+The non-image based approach on the other hand makes use of sensors to capture a gesture. These sensors are catogorised into glove devices and band devices. Typically these devices make use of Inertial Measurment Units (IMUs) in combination with flex sensors to capoture the movement of a hand or arm \hl(insert source). These deviceces are typically more robust to environmenteal factors copared to the image-based approach, however the recent trend has been to move to image-based approachces as they are less intrusive and more userfriendly \hl{source}. Image-based approaches also make use of the camera already mounted on the drone, thus making it more cost effective and easier to implement \hl{source}. 
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.5]{figs/gesture_sensors.png}
+    \caption{Flowchart showing the different types of gesture recognition approaches.}
+    \label{fig:gesture_sensors}
+\end{figure}
+
+\subsection{Gesture Languages}
+The sensors mentioned above are used to capture the movementes of a hand gesture, however, they do not interperate the meaning of the gesture. In order to do this, a gesture language is needed. A gesture language is a dataset that matches a gesture to a meaning \citep{Patrona2021}. There are a number of different gesture languages that have been used in the past for general gesture recognition, and have been applied to both manned and unmanned aerial vehicles. According to \cite{Patrona2021}, the following are some of the know gesture languages: 
+\begin{itemize}
+    \item \textbf{Naval Air Training and Operating Procedures Standardization (NATOPS).} This is the most complete and detailed dataset, used for communicating between a pilot of a aircraft or helicopter and the ground crew. This meanis that it cannot be used for drone control as "The way UAVs "perceive" what they see is totally different from the way humans do so." \citep{Patrona2021}.    
+    \item \textbf{DJI Spark Language}. This lanugae was launched in 2017 as the first commerciral UAV to have gesture control for handeling the movement of the drone as well as image/video capturing. It consists of 8 gestures, namely: "palm launch, palm control, adjusting position, stop adjusting position, follow, take selfie, record video, beckon and palm land" 
+    \item \textbf{DJI Mavic Air Lanhuage.} This language is similar to the DJI Spark language, however with a few alternations and additions to the gestures. 
+    \item \textbf{Keck Gesture Dataset.} This is a subset of the NATOPS language and it consists of 14 gestures that were designd to be used in a cluttered environment with moving cameras. Its is primeraley used to validate other gesture languages as it is a framework with 126 videos of static gesrtures and 168 videos of gesutuses in a dynamic environment \citep{Esclara2017}. 
+    \item \textbf{UAV-GESTURE Dataset.} This dataset was created in 2018 and was the first publically available dataset of "UAV handling signals recoprded outdoors by a flying drone." \citep{Patrona2021}. 
+    \item \textbf{AUTH UAV Gesture LAnguage}. This dataset was created by \cite{Patrona2021} as a more generic language for controlling a dataset that improved on the limitations of the previously mentioned datasets. 
+  
+\end{itemize}
+These datasets are very helful when it comes to gesture control of drones, however they are limited in that they require the user to learn the specific gesture languages and they do not allow for personalisation of the gestures. This is a major limitation as it does not allow for users to use their own natural gestures, and it also does not allow for users to adapt the gesture language to their specific needs and preferences. This is a gap that this project aims to address by allowing users to create and personalise their own gestures for controlling the drone. 
+
+\section{Current Implementations}
+There have been a numebr of implementations of gesture control for drones. They range in their application, harware implementations as well  as software implementations. A few will be discussed in this report 
+
+\subsection{Wearable Glove Control}
+One of the most comman implementations of gesture controlled drones has been to use a wearable device. The basic idea is that the drone mimics the movements of the hand and incorporates additional sensors to capture a wide range of gestures. A study by \cite{muezzinoglu2021} proposed an intelligent human-UAV interaction framework that was cenetered around the use of two wearable gloves that allowed for real-time, controller-free piloting of a drone. 
+
+Each glove is made up of 5 flex sensors that are used to capture the bending movemnts of the fingers. These sensors aere made of a resistive material that changes its resistance when bent. As the resistance changes an analog signal is created and can be processed to determine the shape of the hand. The gloves also make use of an IMU incorporating a 3-axis gyroscope and 3-axis accelerometer. These sensors work together to capture the orientation and movement of the hand. The data is then captured using an STM32 microcontroller. 
+
+Figure \ref{fig:data_glove} depicts the design of the glove \citep{muezzinoglu2021}. 
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.5]{figs/data_glove.png}
+    \caption{Design of the wearable glove used for gesture control of a drone.}
+    \label{fig:data_glove}|
+\end{figure}
+
+Before the data can be used it needs to undergo a pre-processing phase, which includes a signal trimming phase and a Normalization phase. The signal trimming phase is used to remove the first and last 3 \% of the signal data to eliminate electrical noise or the "transistion" movements of the hand at when the user begins or ends a gesture. The normalisation phase is used to normalize the raw analog-to-digital vaklues into a consistent dataset to ensure that different users produce recognizable data petterns. 
+
+Following this pre-processing, the framework employed machine learning inference to classify the processed data into one of 25 distinct hand gestures.The researchers evaluated four specific machine learning algorithms to determine the most effective model for real-time flight control: Decision Tree (DT), Naive Bayes (NB), Support Vector Machine (SVM), and K-Nearest Neighbors (KNN). To ensure statistical significance, the performance of these classifiers was verified using a dataset of 49,000 datapoints collected from 20 participants aged between 22 and 63. The experimental results revealed critical trade-offs between classification accuracy and computational speed. SVM was found to be the most precise model, achieving a mean accuracy of 98.02\%, though it required the longest training time at approximately 20,666.7 ms. For real-time piloting where low latency is paramount, KNN proved superior, delivering the fastest test time of 1.22 ms. Decision Tree offered the most efficient training phase at 133.1 ms, while maintaining a competitive accuracy of 96.96\%.
+
+Once a gesture is recognized, the system utilizes a task scheduling algorithm to translate the identified class into pre-defined UAV flight commands. This multi-mode command structure allows for complex 3D navigation; for instance, specific hand orientations and finger flexions can trigger simultaneous movements such as ``Forward Up'' or ``Turn Left Down''. This glove-based approach offers a significant engineering advantage over vision-based systems, as it remains robust against variable ambient lighting and line-of-sight obstructions that typically hinder camera-reliant gesture recognition. The system's high accuracy and millisecond-level response times demonstrate its viability for high-precision human-UAV interaction in complex environments. One downside to this design is that it requires the user to wear a glove, making the device "intrusive and constraining fo the user" \citep{Gio2021}. 
+
+\subsection{Skywriter HAT sensor}
+\cite{Mehta2023} made use of a near-field elctric field sensor (Skywriter HAT sonsor shown in Figure \ref{fig:skywriter_hat}) to control the roll, pitch and yaw of the drone. The sensor detects a change in a magnetic field when a conducticve object (such as a hand) enters in the field. The change in magnetic field is converted into a digital signal that represented the x, y and z coordinate values. These values were used by a Raspberry Pi that coonverts these alues to the roll, pitch and yaw to control a Crazyflie drone. An Extended Kalmen Filter was used to smooth the signals noise and to combine the information into one reliable estimate of the drone's position, velocity, and orientation at any moment.
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.4]{figs/skywriter_hat.png}
+    \caption{Skywriter HAT sensor used for gesture control of a drone.}
+    \label{fig:skywriter_hat}
+\end{figure}
+
+The authors showed some success with this design hwoever there were real limitations and concerns. The first was that the Skywriter sensor was noisy and the they were unable to completly isolate which acis was moving. This also cause the drone to drift when the hand was held still.    
+
+\subsection{LEAP Motion Sensor}
+\cite{Sarkar2016} describes the Leap Montion Sensor as a gesture recognition device that uses two monochromatic infrared (IR) cameras and three infrared LEDs to track infrared light. By using stereoscopy from its two cameras, the Leap reduces errors and achieves highly precise tracking of hand and finger movements. The sensor can track hand motion up to a distance of about 1 meter directly above it, creating a hemispherical area above the sensor. Once the hand enters the area, the sensors detects movement and using the LEAP Software Development Kit (SDK), advanced Computer Vision algorithems run in order to exctract raw sensor data. Figure \ref{fig:Leap_sensor} \citep{Sarkar2016} shows the motion sensor as well as the hemispheroical section where a hand movement can be detected. 
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=1.0]{figs/Leap_sensor.png}
+    \caption{Leap motion sensor and the hemispherical area}
+    \label{fig:Leap_sensor}
+\end{figure}
+
+
+The Leap motion sensor has been used by \cite{Sarkar2016} as a ground station to control the movements of an AR DRONE 2.0. However this sensor was only used to control the pitch, yaw and roll of the drone and it was not used to communicate high level commands to the drone.  
+
+\subsection{Microsoft Kinect}
+\cite{Gio2021} developed a system that uses the Microsoft Kinect to record full body gestures to control a drone. The Microsoft Kinect is used as a depth-sensing device that captures the full body movements by constructing a real-time 3D skeletal model of the user. This model tracts the posiotions of the users jouints (eg. shoulders, elbows, spine and hips) which allows the system to track the posture and movement of the user. The gesture recognitions is done by computing the angles between the joints rather than relying on the absiolute positions. These calculated angles are compared to experimentally defined thresholds to determine which gesture is being peformed. This allows for gestures to be interperated, regardless of the users's body size or the distance from the sensor, making the system more felxible for users. Figure \ref{fig:Kinect_overview} shows a flow chart of how the system interacts with each subsystem \citep{Gio2021}.
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.6]{figs/kinect_overview.png}
+    \caption{Overview of the Microsoft Kinect system for drone control}
+    \label{fig:Kinect_overview}
+\end{figure}
+
+The Kinect streams the joint position data to a computer, where the motion recognition software evaluates the geometroc telationships between the various joints. For examples the torso inclination, or the arm position is translazted into angular values, and specific combinations of these angles correspond to drone commands such as move forward, sideways or rotate. Figure \ref{fig:Kinect_commands} shows the commands and associated gestures that \cite{Gio2021} has developed.
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.45]{figs/Kinect_gestures.png}
+    \caption{Commands and associated gestures for the Microsoft Kinect system}
+    \label{fig:Kinect_commands}
+\end{figure}
+
+The use of angle-based recognition also improves robustness  by reducing sensitivity to environmental factors and positioning constraints. Experimental validation showed that the system could successfully recognise gestures for all participants, demonstrating reliable performance across different users. 
+
+One key contribution of this work is its implementation of spped control, wich is achieved using the amplitude of the user's movements. Instead of gestures acting a simple on/off commands, the magnitude of the body motion is mapped to the drones velocity. Larger movements correspond to a higher speed command where as smaller, less pronounced movements result in lower speed commands. This form of control was achieved using a continuous linear mapping between the gesture amplitude and the speed of the gesture. Figure \ref{fig:Kinect_speed_control} shows how the amplitude and speed of the gestrure is used to control the speed of the drone.
+
+\begin{figure}[htbp]
+    \centering
+    
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.43]{figs/kinect_speed1.png}
+        \caption{Diagram showing the control of the spped for a lateral movemnt of the drone.}
+        \label{fig:image1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.47]{figs/kinect_speed2.png}
+        \caption{Graph showing the linear regression for speed calculation}
+        \label{fig:image2}
+    \end{subfigure}
+    
+    \caption{Speed control of the Kinect system}
+    \label{fig:Kinect_speed_control}
+\end{figure}
+
+Figure \ref{fig:image1} shows the angle $\varphi ' $ is greater than $\varphi$ which results in the lateral speed $v'_{lateral}$ of the drone being greater than the lateral speed $v_{lateral}$ of the drone. The following forulas are used to caluclate the gradient anf the equation for the linear regression line shown in \ref{fig:image2}:
+
+\begin{equation}
+    m = \frac{\text{maxi Speed} - \text{mini Speed}}{\text{maxi Amplitude} - \text{mini Amplitude}}
+\end{equation}
+
+\begin{equation}
+    y = (x - \text{mini Amplitude}) \times m + \text{mini Speed}
+\end{equation}
+
+An additoinal feature that this system has is a graphical user interface (GUI) designed to enhance the user interaction. The interface displays real-time video of the drones onboard camera, along with additional information such as battery status and a live view of the skeletal tracking, allowing users to confirm that their gestures are correctly recognised. An interactive, gesture-controlled menu is integrated into the GUI, enabling users to select different flight modes and settings without needing a separate controller. This design choice further emphasizes the hands-free nature of the system and enhances the overall user experience. an example of the GUI is shown in Figure \ref{fig:Kinect_GUI}. 
+
+\begin{figure}[htbp]
+    \centering
+    
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.5]{figs/GUI_menu.png}
+        \caption{GUI menu }
+        \label{fig:GUI_menu}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.5]{figs/Depth_map.png}
+        \caption{Depth map of the user with the skeletal tracking overlay}
+        \label{fig:Depth_map}
+    \end{subfigure}
+    
+    \caption{Graphical user interface for the Kinect system}
+    \label{fig:Kinect_GUI}
+\end{figure}
+
+\cite{Gio2021} peformed a flight test to evaluate the systems peformance. The experiment was designed to reflect realistic future applications and required participants to navigate the drone to a target location while avoiding obstacles, capture an image, and return to the starting point. Both experienced and inexperienced users were included to represent professional and casual use cases. Although live video from the drone’s onboard camera was displayed, the test was carried out in an open space to ensure that less experienced users could still maintain direct visual contact with the drone. To enable comparison, the same task was performed using both gesture-based control and a traditional controller. Four participants took part: one experienced with both control methods, one familiar only with conventional control, and two with no prior drone experience. Users were given a brief explanation of the gestures and a 30-second practice period for each method, and each participant completed the task twice to ensure reliable data collection. The results are summarised in Figure \ref{fig:Kinect_results}.
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.5]{figs/Kinect_results.png}
+    \caption{Results of the Kinect gesture control experiment}
+    \label{fig:Kinect_results}
+\end{figure}
+
+The results demonstrate that the Kinect-based gesture control system is both reliable and effective for drone operation. Gesture recognition was successful for all participants, regardless of physical differences, confirming the robustness of the angle-based tracking approach. The system also showed high accuracy, with less than 2\% error between intended and executed speed commands, indicating precise translation of gestures into control actions. In practical flight tests, all users—including beginners—were able to complete navigation tasks successfully, although gesture-based control was about 27\% slower for experienced users compared to a traditional controller. Despite this, the system was found to be more intuitive and less mentally demanding, particularly for inexperienced users, highlighting its potential as a natural and user-friendly alternative to conventional drone control.
+
+\subsection{MediaPipe Hands}
+One of the most common approaches to gesture recognition is to use Googles MediaPipe Hands (MPH) software. \cite{Khaksar2023} has used this software to develop a quadcopter control system as an alternative Human-Computer Inteaction (HCI) by focusing on replacing conventional drone control methods with a Hand-Gestuer Recognition (HGR) interface. The aim of this system was to deevelope and evaluate a HGR system capable of provifing an intuative, low-cost, and reliable mens of controllign a quatcopter without the neeed for specialised or wearable hardware. 
+
+The cental element of this ssystem is the MediaPipe Hands (MPH) framework.The authors descibe the MPH framework as an on-device real-time hand identification software designed to operate using a single RGB camera. 
+MediaPipe Hands operates using a two-stage machine-learning pipeline: first, a palm detection model identifies regions of interest within an RGB image, and second, a hand landmark model estimates a 21-point skeletal representation of the detected hand. Figure \ref{fig:MediaPipe_hand} shows the landmarks \citep{Taylor2025}.
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.5]{figs/MediaPipe_hand.png}
+    \caption{Landmarks identified by MediaPipe Hands}
+    \label{fig:MediaPipe_hand}
+\end{figure}
+
+These landmarks provode a 2.5D representation (inferring depth) that allows fo the calculation of joint angles and spatial relationshipd between the fingures. A quantitative validation is performed by comparing these computed joint angles with clinically measured values using a goniometer, allowing the authors to assess model accuracy under different hand poses and orientations. Finally, multiple classification algorithms are tested to determine the most accurate and efficient method for mapping gestures to predefined drone commands, and the system is implemented and tuned through real-world flight tests.
+
+However, a limitation of  MPH is that it is sensative to depth (Z-axis) variations, wich could reduce the landmark accuracy under certain conditions. It was found that the landmark accuaracy decreased from 86.7\% to 41.5\% under certain conditions. Despite these limitations, the system authors proposed a classification method that greatly improved the accuracy and allowed for the to maintain reliable performance achiving a gesture-calssification accuracy of 96.25\% in real-world flight tests.
+
+Additionally, \cite{Taylor2025} has built on the use of MediaPipe Hands for gesture control of drones.  Making use of the 21 landmaks, the authors were able to implement a custom function that extracts two types of featires from the landmark data. These include: 
+
+\begin{itemize}
+    \item \textbf{Distance features}: 
+    The eclidean distacne between specific landmarks were calculated as shown in Equation \ref{eq:Dist}. 
+    \begin{equation}
+        d_{ij} =  \left|{v_i - v_j} \right| = \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}
+        \label{eq:Dist}
+    \end{equation}
+    
+    \item \textbf{Angle features}:
+    $\theta_{ijk}$ was defined using the cosine rule (Equation \ref{eq:arccos}) to measue the geometric angles between three consecutive landmarks, for example the finger joints. 
+    \begin{equation}
+        \theta_{ijk} = \arccos (\frac{(v_i - v_j)^T (v_k - v_j)}{d_{ij} \cdot d_{kj}})
+        \label{eq:arccos}
+    \end{equation}
+
+\end{itemize}
+ 
+Using these equation a matrix, that corresponds to specific gestures is constructed and can be seen in Figure \ref{fig:Gesture_matrix} \citep{Taylor2025}.
+
+ \begin{figure} [htbp]
+    \raggedright
+    \includegraphics[scale=0.5]{figs/Gesture_matrix.png}
+    \caption{Gesture matrix defining specific gestures based on distance and angle features extracted from the MediaPipe Hands landmarks.}
+    \label{fig:Gesture_matrix}
+\end{figure}
+
+The results of this system showed that 8 of the 10 gestures reached a 100 \% recognition rate, however there were minor inconsistancies with the "peace" gesture achieving an accuracy of 88 \% and the "thumbs  up" gesture achieving an accuracy of 96 \% as these appeared similar to other gestures. Thus the researchers concluded that the system successfully bridges the gap between human interaction and autonomous safety. While this system was shown to be effective, the researchers identified the lighting conditions, hand positioning, and computational overhead as primary areas for future optimization. 
+
+\subsection{DJI Neo 2}
+The most recent and advanced commercially available drone that uses gesture recognition to control its movement is the DJI Neo 2. This drone was released in November 2025 \hl{insert source}. Due to this drone being very new there is little information available about the specific gesture recognition system that it uses, however the unique features of the drone are known. They include: 
+
+\begin{itemize}
+    \item Palm takeoff and landing 
+    \item Distance control 
+    \item Position Control
+\end{itemize}
+
+According to the user manual \citep{DJI_Neo2_Manual}, the drone can be controlled through the following gestures. When activated, the user must raise their palm towards the camera, the drone will then indicate with a blue light that the drone can be controlled with gestures. The drone then tracks the position of the user's hand and can move in the direction of the hand movement. For example, if the user moves their hand to the left, the drone will move to the left. If the user moves their hand up, the drone will move up. This is decsribed in Figure \ref{fig:DJI_Move}.
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.6]{figs/DJI_Move.png}
+    \caption{Position control of the DJI Neo 2 using hand gestures.}
+    \label{fig:DJI_Move}
+\end{figure}
+
+The drone can also be controlled by moving the hand closer or further away from the camera, which will control the distance of the drone from the user. This is done by moving both hands closer togethert to bring the droen closer, and moving the further apart to move it further way as seen in Figure \ref{fig:DJI_Dist} \citep{DJI_Neo2_Manual}.  
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.6]{figs/DJI_Dist.png}
+    \caption{Distance control of the DJI Neo 2 using hand gestures.}
+    \label{fig:DJI_Dist}
+\end{figure}
+
+The The drone has additional festures however they are not controlled with a gesture, but instead using buttons on the drone itself. Soem of these additonal features include ActiveTrack, Spotlight an Quickshots. The Quickshots feature on DJI drones are specific cinimatic shots that have a set flight path. These include: 
+
+\begin{itemize}
+    \item Dronie 
+    \item Helix 
+    \item Rocket 
+    \item Circle 
+    \item Boomearang
+\end{itemize}
+
+One of the limitations that this drone has is that the gesture control can only be used to position the drone, and all additonal fucntions needs to be set on the dron itself or by using a remote controller. Therefore this project will aim to develop a system that allows for more complex commands to be given to the drone using gestures, such as taking a photo, recording a video, or activating specific flight modes. 
+
+\subsection{EMG sensors}
+
+\section{Gesture Classification Techniques}   
+Having discussed the different types of gesture control and the current implementations of gesture control of drones, it is also important to discuss the different techniques that are used to recognise and classify gestures. There are a number of different techniques that have been used and the avancement of machine learnign has allowed for more accurate and efficient gesture recognition software. 
+
+\subsection{Traditional Methods}
+In this report, traditional methods refer to the well established and commonly used techniques used to recognise and classify gestures. Traditional hand gesture recognition (HGR) methods are based on a structured engineering approach that relies on manually designed features, rather than the automated feature learning used in modern deep learning systems \citep{jiashan2024}. These methods typically extract different types of features from the hand. Shape-based features are common and can include contour-based descriptors from specific regions, global region-based features such as Zernike moments, and gradient-based features like Histograms of Oriented Gradients (HOG), which capture local shape details \citep{bhushan2022}. For signal-based systems, such as those using wearable devices or infrared sensors, statistical measures are often used to describe the signal, including Variance (VAR), Root Mean Square (RMS), and Mean Absolute Value (MAV), which help quantify characteristics like amplitude and power. In addition, simple geometric properties—such as aspect ratio, subarea proportions, and the number of angular points—may be calculated to describe the hand's shape before classification \citep{nogales2023}.
+
+Once these features are defined, they are passed to traditional classifiers. Common examples include K-Nearest Neighbors (KNN), which classifies data based on similarity to nearby samples using distance metrics, Support Vector Machines (SVM), which separate data using an optimal boundary or hyperplane, and Naive Bayes classifiers, which apply probability theory to determine the most likely class \citep{bhushan2022}. Decision Trees, which use measures like information gain and entropy to make decisions, are also widely used \citep{nogales2023}.
+
+Despite their usefulness, these traditional methods have several limitations. Vision-based approaches are often sensitive to lighting conditions and obstructions, and for dynamic gestures, HMMs only consider transitions between consecutive states, which can overlook the overall coherence and structure of a gesture. DTW requires a predefined "standard" or reference gesture, which is often not available and must be set subjectively. Additionally, these systems can suffer from the "curse of dimensionality", where using too many features reduces performance and leads to overfitting, and they struggle to handle the natural variation in how different users perform the same gesture, both in space (spatial variability) and over time (variability of time) \citep{jiashan2024}. Some models, such as Naïve Bayes, rely on simplifying assumptions—like treating features as independent variables—which often fails to hold in practice and leads to unreliable results \citep{bhushan2022}.
+
+More reliable and accurate approaches that are used are neural networks and deep learning algorithms to automate feature extraction \citep{jiashan2024}. 
+Convolutional Neural Networks (CNNs), for instance, are highly effective at identifying unique grid patterns and extracting discriminative features directly from raw image data, bypassing the need for a manual detection or segmentation stage \citep{bhushan2022}. \cite{bhushan2022} demonstrated that CNNs significantly outperform traditional machine learning classifiers, achieving a peak accuracy of 91.41 \% on gesture datasets compared to much lower yields from models like Naïve Bayes or SVC. For dynamic gestures involving complex time sequences and spatial variability, advanced architectures such as 3D Convolutional Neural Networks (3DCNN) and Long Short-Term Memory (LSTM) networks are employed to capture temporal dependencies and ensure the continuity of the gesture motion \citep{jiashan2024}.  
+
+However, although nearal networks have been shown to have superior accuracy, they present distinct engineering challenges. \cite{nogales2023} states that deep learning algorithms typically require high computational loads and significant programming complexity, which can hinder their portability. While the use of GPUs can mitigate processing delays, the high power consumption required by such hardware often conflicts with the requirements for portable, embedded hand gesture recognition systems. Furthermore, researchers have noted that it remains difficult to design neural network architectures that fully account for specific physical gesture motion features, sometimes leading to a "rough" treatment of time series data compared to more specialized geometric models \citep{jiashan2024}.  
+
+\section{New Advancements}
+There has been much development in the field of gesture control that goes beyond controlling drones. These developments have lead to new ways of interacting with robots and have also allowed for the development of new gesture recognition and classification techniques. The most relevent advancements are discussed below. 
+
+\subsection{ToF Camera in Moving Vehicle}
+\cite{Reyes2023} developed a system that uses a Time of Flight (ToF) camera to capture hand gestures in a moving vehicle. The aim f this research was to adress the challenges of dynamic hand gesture recognition within a driving environment. The researchers propose a model-adaptation approach to personalize a CNNLSTM (Convolutional Long-Short Term Memory) neural network, aiming to improve recognition accuracy while reducing the massive data requirements typically associated with deep learning. The system that was developed allowed a driver of a vehicle to control the infotainment system of the car using gestures to peform task such as increasing the volume, or skipping a song. It is important to note that the authors state that the system is designed to be expanded upon and adapted to be used in other applications. 
+
+A ToF camera was chosen due to the limitations of RGB cameras in environments with variable lighting conditions. The data aquisition process involed the following: 
+ \begin{itemize}
+    \item \textbf{Camera setup}. The camera was mounted on the ceilign of the vehicel near the front of the car. This provided a top-down perspective of the gear shift area. 
+    \item \textbf{Data collection}. 83 participants were asked to perform a series of six specified gestures. These gestures can be seen in Figure ** \citep{Reyes2023}. As a result the final dataset comprised of 4325 gestures. 
+ \end{itemize} 
+
+\begin{figure}[htbp]
+    \centering
+    
+    \begin{subfigure}{0.2\textwidth}
+        \includegraphics[width=\linewidth]{figs/point_tof.png}
+    \end{subfigure}
+    \begin{subfigure}{0.2\textwidth}
+        \includegraphics[width=\linewidth]{figs/2_finger_tof.png}
+    \end{subfigure}
+    \begin{subfigure}{0.2\textwidth}
+        \includegraphics[width=\linewidth]{figs/right_rotate_tof.png}
+    \end{subfigure}    
+    \begin{subfigure}{0.2\textwidth}
+        \includegraphics[width=\linewidth]{figs/left_rotate_tof.png}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+
+    \begin{subfigure}{0.2\textwidth}
+        \includegraphics[width=\linewidth]{figs/swipe_left_tof.png}
+    \end{subfigure}
+    \begin{subfigure}{0.2\textwidth}
+        \includegraphics[width=\linewidth]{figs/swipe_right_tof.png}
+    \end{subfigure}
+    
+    \caption{Six gestures performed by participants}
+\end{figure}
+
+The dataset then underwent a preprocessingng phase which included stadarising the data suc that eaahc recorded gesture was fiixed to 12 fps (frames per second), having a maximum of 70 frames s per gesture. Secondly a 3D region of interest was established to be within 12 - 500 cm from the camera to limit where a gestre could be peformed. Finally background subtraction was used to isolate the hand from background of the car. With this completed the data was then used to train a CNNLSTM model. 
+
+The study highlight that a "one-model-fits-all" approach is insufficient due to individual differences in gesture performance. The model personalization and adaptation process begins with the creation of a Universal Background Model (UBM), a baseline CNNLSTM architecture trained on a broad group of participants that initially achieves a recognition accuracy of 66.9~\%. To account for the individual differences in how various users perform dynamic gestures, the researchers utilize fine-tuning to adapt this UBM to specific individuals within an "Adaptation Set". This single-step adaptation involves training the UBM for an additional 20 epochs using a small amount of data from the specific user, which increases recognition accuracy to 77.8~\%. The effectiveness of this personalization is further enhanced through data augmentation—using random translations along the X and Y axes to artificially expand the training set—which pushes the average personalized accuracy to 86.4~\%. Experimental results indicate that while the model improves with as few as two gestures per class, accuracy peaks at 90.5~\% when the model is fine-tuned with 20 gestures per class. Finally, the study explores incremental learning, where the vehicle adapts to the driver over time; however, this results in a "stability-plasticity dilemma" where the system becomes highly accurate for the specific user but "forgets" how to recognize gestures from others, a common side effect of deep learning personalization.
+
+\subsection{One-shot Gesture Recognition}
+\cite{Cabrera2017} identified a core problem with gesture recognition systems that being they require many training examples to work. As a result they developed a system that learns to recognise a gesture from a single observation. This is known as one-shot learning. Rather than collecting lots of training data and treating the data as purely statistical patterns, this framework extracts key "inflection points" from a single gesture and uses them to artificially generate hundreds of realistic variations that  are used for training \citep{Cabrera2017}. 
+
+The inflection points that the authers use are not arbitary, but are instead neurologically motivated, correlating with electroencephalographic (EEG) signals in the motor cotex, reflecting the way humans naturally represent gestures in the brain.
+
+The approach was evaluated using eight upper-limb gestures from the MSRC-12 Kinect dataset, across multiple classification techniques, including Dynamic Time Warping (DTW), Support Vector Machines (SVM), Hidden Markov Models (HMM), and Conditional Random Fields (CRF). Results demonstrated strong performance, achieving an average classification accuracy of approximately 90~\% across all classifiers. In addition to conventional accuracy metrics, the authors introduced a novel “coherency” measure, which evaluates the agreement between human and machine interpretation of gestures. Using a Baxter robot to perform the generated gestures, a coherency score of 93.8~\% was achieved, indicating a high level of alignment between artificial and human gesture recognition.
+
+Furthermore, the system exhibits adaptive learning capabilities, where performance improves as additional real-world observations are incorporated. Accuracy was shown to increase from approximately 90~\% in the one-shot case to around 95~\% with ten training examples, illustrating a natural progression from one-shot to N-shot learning. However, a temporary decrease in performance at low sample sizes highlights the sensitivity of the system to outlier observations. This can be seen in Figure \ref{fig:AL_results} which shows the Adative Learning (AL) system implemented with two differrent classification algorithems: DTW and HMM. 
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.7]{figs/AL_results.png}
+    \caption{Adaptive learning performance of the one-shot gesture recognition system, showing classification accuracy as a function of the number of training examples for both DTW and HMM classifiers.}
+    \label{fig:AL_results}
+\end{figure}
+
+Overall, the key contribution of this work lies in its classifier-agnostic framework, which integrates principles from cognitive science with machine learning to enable robust recognition of previously unseen gestures from minimal training data.
+
+\subsection{Vision-based hand gesture (FSL)}
+Following on from this research \cite{Shahi2024} developed a system that also learns to recognise a gesture from a single observation. The authros of this research present a vision-based hand gesture recognition system that enables gesture customization from a single demonstaration. the system proposed by \cite{Shahi2024} devel;oped a end-to-end framework tha supports a wide range of gestures, including both static and dynamic, one and two-handed gestures as well as multiple viewpoints. The method combines hand keypoint extraction, a graph transformer architecture, and a few-shot learning (FSL) stratagy besed on meta-learning (MAML) to rapidly adapt to new gesture classes from minimal data. Hand pose estimation is used to extract skeletal joint coordinates, which are processed by the graph transformer to capture both the spatial relatiobships between the joints and the temporal motion patterns. To further enhance learning from limited data, a meta-augmnetation technique is introduced to increase task diversity by generating additional gesture combinations. Unlike many prior works, the system also incorporates a background calss to distinguish intential gestures from irrelevant hand movements, improving real world robustness. Figure \ref{fig:FSL_overview} discribes the system overview \citep{Shahi2024}. 
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.55]{figs/FSL_overview.png}
+    \caption{Overview of the vision-based few-shot hand gesture recognition system.}
+    \label{fig:FSL_overview}
+\end{figure}
+
+\cite{Shahi2024} evaluated the  system through a user study involving 21 participants and 20 gesture classes. The results show a average accuracy of 95~\% with only one demonstration per gesture. This show that the system outperforms baseline approaches such as fine-tuning, nearest neighbours and random forest classifiers. Additionally, the authors demonstrate the practicallity of their approach via theree real-wolrd applications, including a gesture design tool, gesture-based productivity interfaces, and mixed reality interaction systems.  
+
