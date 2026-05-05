@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{25}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -96,6 +96,11 @@
   761--770.
 \newblock ISSN 2732-527X.
 
+\bibitem[{\citenamefont{{HAT}}(2026)}]{Skywriter_HAT}
+\bibnamefont{{HAT}}, \bibfnamefont{S.} (2026).
+\newblock {Pimoroni}.
+\newblock https://shop.pimoroni.com/products/skywriter-hat.
+
 \bibitem[{\citenamefont{Jiashan} \protect\BIBand{}
   \citenamefont{Zhonghua}(2024)}]{jiashan2024}
 \bibnamefont{Jiashan}, \bibfnamefont{L.} \protect\BIBand{}
@@ -115,6 +120,12 @@
   {{Quad-Rotor Drone Using Hand-Gesture Recognition}}.
 \newblock \emph{Sensors}, \bblvol{}~23, \bblno{}~12.
 \newblock ISSN 1424-8220.
+
+\bibitem[{\citenamefont{Kieldsen}(2025)}]{Kieldsen2025}
+\bibnamefont{Kieldsen}, \bibfnamefont{S.} (2025).
+\newblock I flew the dji neo 2 for a week, and this affordable selfie drone
+  feels like a big upgrade over its predecessor.
+\newblock https://www.techradar.com/cameras/drones/dji-neo-2-review.
 
 \bibitem[{\citenamefont{Kumar} \emph{\bbletal{}}(2020)\citenamefont{Kumar},
   \citenamefont{Jain}, \citenamefont{Rodrigues}, \citenamefont{Dsouza}

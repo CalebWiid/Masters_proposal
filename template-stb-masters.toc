@@ -18,18 +18,18 @@
 \contentsline {subsection}{\numberline {2.2.2}Skywriter HAT sensor}{8}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}LEAP Motion Sensor}{8}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Microsoft Kinect}{9}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}MediaPipe Hands}{13}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}DJI Neo 2}{15}{subsection.2.2.6}%
-\contentsline {subsection}{\numberline {2.2.7}EMG sensors}{17}{subsection.2.2.7}%
-\contentsline {section}{\numberline {2.3}Gesture Classification Techniques}{17}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Traditional Methods}{17}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}New Advancements}{19}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}ToF Camera in Moving Vehicle}{19}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}One-shot Gesture Recognition}{21}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Vision-based hand gesture (FSL)}{22}{subsection.2.4.3}%
-\contentsline {chapter}{\numberline {3}Workplan}{24}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Project Schedule}{27}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Risk Assessment}{30}{chapter.5}%
-\contentsline {chapter}{List of references}{33}{section*.27}%
+\contentsline {subsection}{\numberline {2.2.5}MediaPipe Hands}{12}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}DJI Neo 2}{14}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}EMG sensors}{16}{subsection.2.2.7}%
+\contentsline {section}{\numberline {2.3}Gesture Classification Techniques}{16}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Traditional Methods}{16}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}New Advancements}{18}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}ToF Camera in Moving Vehicle}{18}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}One-shot Gesture Recognition}{20}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Vision-based hand gesture (FSL)}{21}{subsection.2.4.3}%
+\contentsline {chapter}{\numberline {3}Workplan}{23}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Project Schedule}{26}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Risk Assessment}{29}{chapter.5}%
+\contentsline {chapter}{List of references}{32}{section*.26}%
 \babel@toc {english}{}\relax 
 \babel@toc {UKenglish}{}\relax 
