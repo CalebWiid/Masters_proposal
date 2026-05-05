@@ -3,26 +3,26 @@
 \babel@toc {UKenglish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Flowchart showing the different types of gesture recognition approaches.}}{5}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Design of the wearable glove used for gesture control of a drone.}}{7}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Skywriter HAT sensor used for gesture control of a drone.}}{8}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Leap motion sensor and the hemispherical area}}{9}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Overview of the Microsoft Kinect system for drone control}}{10}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Commands and associated gestures for the Microsoft Kinect system}}{10}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Speed control of the Kinect system}}{11}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Graphical user interface for the Kinect system}}{12}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Results of the Kinect gesture control experiment}}{13}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Landmarks identified by MediaPipe Hands}}{14}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Gesture matrix defining specific gestures based on distance and angle features extracted from the MediaPipe Hands landmarks.}}{15}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Position control of the DJI Neo 2 using hand gestures.}}{16}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Distance control of the DJI Neo 2 using hand gestures.}}{16}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Six gestures performed by participants}}{20}{figure.caption.23}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Adaptive learning performance of the one-shot gesture recognition system, showing classification accuracy as a function of the number of training examples for both DTW and HMM classifiers.}}{22}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Overview of the vision-based few-shot hand gesture recognition system.}}{23}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Flowchart showing the different types of gesture recognition approaches.}}{5}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Design of the wearable glove used for gesture control of a drone.}}{7}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Skywriter HAT sensor used for gesture control of a drone.}}{8}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Leap motion sensor and the hemispherical area}}{9}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Overview of the Microsoft Kinect system for drone control}}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Commands and associated gestures for the Microsoft Kinect system}}{10}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Speed control of the Kinect system}}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Graphical user interface for the Kinect system}}{12}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Results of the Kinect gesture control experiment}}{13}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Landmarks identified by MediaPipe Hands}}{14}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Gesture matrix defining specific gestures based on distance and angle features extracted from the MediaPipe Hands landmarks.}}{15}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Position control of the DJI Neo 2 using hand gestures.}}{16}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Distance control of the DJI Neo 2 using hand gestures.}}{16}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Six gestures performed by participants}}{20}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Adaptive learning performance of the one-shot gesture recognition system, showing classification accuracy as a function of the number of training examples for both DTW and HMM classifiers.}}{22}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Overview of the vision-based few-shot hand gesture recognition system.}}{23}{figure.caption.23}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Gantt Chart 2026}}{28}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Gantt Chart 2027}}{29}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Gantt Chart 2026}}{28}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Gantt Chart 2027}}{29}{figure.caption.25}%
 \addvspace {10\p@ }
 \babel@toc {english}{}\relax 
 \babel@toc {UKenglish}{}\relax 

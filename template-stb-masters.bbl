@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{23}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -18,6 +18,12 @@
 \newcommand{\Capitalize}[1]{\uppercase{#1}}
 \newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Int(2017)}]{International_journal_of_engineering_research_2017}
+ (2017).
+\newblock Gesture-based {{Flying Robot}} for {{Precision Agriculture}}.
+\newblock \emph{International Journal of Engineering Research}, \bblvol{}~5,
+  \bblno{}~06.
 
 \bibitem[{\citenamefont{{Anuja Phapale}} \protect\BIBand{}
   \citenamefont{{Shriya Sawashe}}(2024)}]{Anjua2024}
@@ -66,6 +72,20 @@
 \bibnamefont{{Escalera, Sergio}}, \bibfnamefont{{Guyon, Isabelle}, A.} (2017).
 \newblock Challenges in {{Machine Learning}}.
 \newblock \emph{Challenges in Machine Learning}.
+
+\bibitem[{\citenamefont{{G R, Divya}} \emph{\bbletal{}}(2025)\citenamefont{{G
+  R, Divya}}, \citenamefont{{Nayak, Dhanya M.}}, \citenamefont{{Disha}},
+  \citenamefont{{Bhovi, Madhu A.}} \protect\BIBand{} \citenamefont{{S, Shobana
+  T.}}}]{DronesInAction2025}
+\bibnamefont{{G R, Divya}}, \bibnamefont{{Nayak, Dhanya M.}},
+  \bibnamefont{{Disha}}, \bibnamefont{{Bhovi, Madhu A.}} \protect\BIBand{}
+  \bibnamefont{{S, Shobana T.}} (2025).
+\newblock Drones in action: A review of their applications and impact across
+  sectors.
+\newblock \emph{International Journal of Creative Research Thoughts (IJCRT)},
+  \bblvol{}~13, \bblno{}~9, \bblp{} g332.
+\newblock ISSN 2320-2882.
+\newline\bblurlpre\url{https://ijcrt.org/papers/IJCRT2502741.pdf}
 
 \bibitem[{\citenamefont{Gio} \emph{\bbletal{}}(2021)\citenamefont{Gio},
   \citenamefont{Brisco} \protect\BIBand{} \citenamefont{Vuletic}}]{Gio2021}
@@ -234,17 +254,5 @@
   Motion Control}}.
 \newblock \emph{Applied Sciences}, \bblvol{}~14, \bblno{}~22, \bblp{} 10230.
 \newblock ISSN 2076-3417.
-
-\bibitem[{\citenamefont{Zhao} \emph{\bbletal{}}(2018)\citenamefont{Zhao},
-  \citenamefont{Luo}, \citenamefont{Song}, \citenamefont{Chen},
-  \citenamefont{Lu} \protect\BIBand{} \citenamefont{Wu}}]{Zhao2018}
-\bibnamefont{Zhao}, \bibfnamefont{Z.}, \bibnamefont{Luo}, \bibfnamefont{H.},
-  \bibnamefont{Song}, \bibfnamefont{G.-H.}, \bibnamefont{Chen},
-  \bibfnamefont{Z.}, \bibnamefont{Lu}, \bibfnamefont{Z.-M.} \protect\BIBand{}
-  \bibnamefont{Wu}, \bibfnamefont{X.} (2018 \bbljan{}).
-\newblock Web-based interactive drone control using hand gesture.
-\newblock \emph{Review of Scientific Instruments}, \bblvol{}~89, \bblno{}~1,
-  \bblp{} 014707.
-\newblock ISSN 0034-6748.
 
 \end{thebibliography}

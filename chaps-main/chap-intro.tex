@@ -2,17 +2,17 @@
 
 \section{Background}
 
-Drones, or Unmanned Aerial Vehicles (UAVs), are becoming increasingly important across many industries. They show great promise in simplifying logistics, reducing costs, improving human safety, and providing faster response times and more accurate results \citep{Patrona2021}. Their effectiveness has been demonstrated across a wide variety of sectors, including agriculture, search and rescue, surveillance, transportation, and photography \hl{find sources}. Despite these advantages, effective drone operation currently requires specialist training, limiting accessibility for many potential users \hl{insert source}.
+Drones, or Unmanned Aerial Vehicles (UAVs), are becoming increasingly important across many industries. They show great promise in simplifying logistics, reducing costs, improving human safety, and providing faster response times and more accurate results \citep{Patrona2021}. Their effectiveness has been demonstrated across a wide variety of sectors, including agriculture, search and rescue, surveillance, transportation, and photography \citep{DronesInAction2025}. Despite these advantages, effective drone operation currently requires specialist training, limiting accessibility for many potential users \citep{International_journal_of_engineering_research_2017}.
 
-This has created demand for systems that allow users to control drones in a more natural and intuitive way. The field of Human-Robot Interaction (HRI) focuses on the study and design of communication between humans and robots \citep{HRI_sciencedirect}, and has driven the emergence of Natural User Interfaces (NUIs). NUIs encompass a range of technologies, including touchscreens, voice recognition, eye tracking, and gesture recognition \citep{Natural_UI}. This project focuses on gesture control as a natural interface for operating a photography drone.
+This has created demand for systems that allow users to control drones in a more natural and intuitive way. The field of Human-Robot Interaction (HRI) focuses on the study and design of communication between humans and robots \citep{HRI_sciencedirect}, and has driven the emergence of Natural User Interfaces (NUIs). NUIs encompass a range of technologies, including touchscreens, voice recognition, eye tracking, and gesture recognition \citep{Natural_UI}. This project will focus on gesture control as a natural interface for operating a photography drone.
 
-Gesture control enables users to communicate with digital systems through natural hand and body movements, removing the need for traditional input devices \citep{Anjua2024}. Research has shown that, without prior instruction, humans naturally attempt to communicate with drones through gestures \citep{Gio2021}, suggesting that gesture-based control aligns closely with instinctive human behaviour. This has practical implications as gesture-based drone control lowers the barrier to entry for a broader range of users by removing the need for specialist training \citep{Mehta2023}. Additionallly, gesture control has been shown to enable both experienced and novice pilots to operate drones more effectively \citep{Gio2021}.
+Gesture control enables users to communicate with digital systems through natural hand and body movements, removing the need for traditional input devices \citep{Anjua2024}. Research has shown that, without prior instruction, humans naturally attempt to communicate with drones through gestures \citep{Gio2021}, suggesting that gesture-based control aligns closely with instinctive human behaviour. This has practical implications as gesture-based drone control lowers the barrier to entry to drones by removing the need for specialist training \citep{Mehta2023}. Additionallly, gesture control has been shown to enable both experienced and novice pilots to operate drones more effectively \citep{Gio2021}.
 
-Despite these advances, current gesture-based control systems remain limited in their flexibility. Most existing approaches rely on fixed, predefined gesture vocabularies that all users must conform to, with no accommodation for individual differences in movement style or preference \citep{Reyes2023}. This lack of personalisation represents a clear gap in the research, which this project addresses.
+Despite these advances, current gesture-based control systems remain limited in their flexibility. Most existing approaches rely on fixed, predefined gesture vocabularies that all users must conform to, with no accommodation for individual differences in movement style or preference \citep{Reyes2023}. This lack of personalisation represents a clear gap in the research, which this project aims to address.
 
 \section{Aim}
 
-The aim of this project is to develop a gesture-controlled photography and videography drone that allows users to create and personalise their own gestures. Rather than conforming to a fixed set of predefined gestures, the system will learn and adapt to gestures chosen by the user, giving them full control over how they interact with the drone.
+The aim of this project is to develop a gesture-controlled photography and videography drone that allows users to create and personalise their own gestures. Rather than conforming to a fixed set of predefined gestures, the system will learn and adapt to gestures chosen by the user, giving them full control over how they will interact with the drone.
 
 A small set of core gestures will remain fixed for essential safety-critical functions such as take-off, landing, emergency stop, and return home. All other functions will be fully customisable, allowing the user to assign any gesture they choose to a specific task.
 
@@ -22,16 +22,17 @@ The drone will support a range of operations, from basic flight controls such as
 
 In order to achieve this aim, the following objectives must be met:
 \begin{itemize}
+    \item Implement system on a physical drone. 
     \item Recognise and interpret basic gestures.
-    \item Control basic drone functions using gestures.
-    \item Learn unique user-defined gestures and assign them to functions.
-    \item Perform complex photography-specific functions.
+    \item Control basic drone functions using basic gestures.
+    \item Learn unique user-defined gestures and assign them to photography-specific functions.
+    \item Perform photography-specific functions.
     \item Manage similar or ambiguous gestures reliably.
 \end{itemize}
 
 \section{Motivation}
 
-Gesture-based drone control presents a compelling alternative to traditional manual controllers. By leveraging natural human motor skills, it aligns interaction with instinctive movement patterns, reducing the complexity associated with conventional control interfaces \citep{Trinitatova2025}. This translates directly into improved accessibility as users without prior piloting experience have been shown to operate drones safely and intuitively, particularly when combined with features such as obstacle avoidance and 3D trajectory mapping \citep{Taylor2025}. Gesture-based control also reduces dependency on specialised hardware such as dedicated radio controllers, broadening the range of contexts in which UAV technology can be practically deployed \citep{Zhao2018}.
+Gesture-based drone control presents  complelling alternative to traditional contollers. By leveraging the natural human motor skills of a person, it allows users to interact with a drone in a more natral way, reducing the complxity assosiated with conventional control interfaces \citep{Trinitatova2025}. As a result this will greatly improve the accessabiliy as users without prior piloting experience. \cite{Taylor2025} has stated that people without prior piloting exerience have been shown to operate gesture-controlled drones safely and intuitively, particulary when combined with features such as obstacle avoidance and 3D trajectory mapping \citep{Taylor2025}.
 
 Beyond accessibility, gesture control can reduce cognitive load by enabling more instantaneous and instinctive command inputs, which is particularly valuable in time-critical applications such as search and rescue or disaster relief scenarios \citep{Kumar2020}. Lightweight, real-time gesture recognition algorithms have further demonstrated that a manageable set of gestures can support precise and nuanced drone manoeuvres without overwhelming the user \citep{Yun2024}. Incorporating personalisation takes this further, allowing the intuitive nature of gesture interaction to be fully realised for each individual user.
 
@@ -39,7 +40,7 @@ Beyond accessibility, gesture control can reduce cognitive load by enabling more
 
 The primary focus of this project is the gesture recognition system. Specifically, how accurately the system can recognise, classify, and learn new gestures. To achieve this, Few-Shot Learning (FSL) will be used, enabling the system to recognise a new gesture from only a small number of examples. This is essential for a system designed to learn from the user in real time.
 
-A photography drone was chosen as the platform because it offers a wide and complex range of tasks, making it an ideal testbed. Although the underlying system could be applied to many other domains; such as agriculture, search and rescue, or surveillance; the photography use case was selected as it presents the greatest variety of distinct functions. If the system performs effectively in this context, it is well-positioned to be adapted to other industries.
+A photography drone was chosen as the platform for testing because it offers a wide and complex range of tasks, making it an ideal testbed. Although the underlying system could be applied to many other domains; such as agriculture, search and rescue, or surveillance; the photography use case was selected as it presents the greatest variety of distinct functions. If the system performs effectively in this context, it is logical to assume that it wil also be effective in other industries.
 
 The key gaps this project addresses are:
 \begin{itemize}
