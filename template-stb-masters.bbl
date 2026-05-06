@@ -96,11 +96,6 @@
   761--770.
 \newblock ISSN 2732-527X.
 
-\bibitem[{\citenamefont{{HAT}}(2026)}]{Skywriter_HAT}
-\bibnamefont{{HAT}}, \bibfnamefont{S.} (2026).
-\newblock {Pimoroni}.
-\newblock https://shop.pimoroni.com/products/skywriter-hat.
-
 \bibitem[{\citenamefont{Jiashan} \protect\BIBand{}
   \citenamefont{Zhonghua}(2024)}]{jiashan2024}
 \bibnamefont{Jiashan}, \bibfnamefont{L.} \protect\BIBand{}
@@ -181,6 +176,11 @@
   Interacting}} with the {{Environment}} ({{AIRPHARO}})}, \bblpp{} 1--7. IEEE,
   Biograd na Moru, Croatia.
 \newblock ISBN 978-1-6654-3389-1.
+
+\bibitem[{\citenamefont{Pimoroni}(2026)}]{Skywriter_HAT}
+\bibnamefont{Pimoroni} (2026).
+\newblock {Skywriter HAT}.
+\newblock https://shop.pimoroni.com/products/skywriter-hat.
 
 \bibitem[{\citenamefont{Reyes} \emph{\bbletal{}}(2023)\citenamefont{Reyes},
   \citenamefont{Gomaa} \protect\BIBand{} \citenamefont{Feld}}]{Reyes2023}

@@ -23,24 +23,24 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--empty author in International_journal_of_engineering_research_2017
 You've used 25 entries,
             3324 wiz_defined-function locations,
-            833 strings with 11151 characters,
-and the built_in function-call counts, 24498 in all, are:
-= -- 1945
+            833 strings with 11149 characters,
+and the built_in function-call counts, 24467 in all, are:
+= -- 1941
 > -- 656
 < -- 49
 + -- 259
 - -- 228
-* -- 2366
-:= -- 2977
+* -- 2361
+:= -- 2975
 add.period$ -- 94
 call.type$ -- 25
 change.case$ -- 201
 chr.to.int$ -- 25
 cite$ -- 29
-duplicate$ -- 2394
-empty$ -- 2236
+duplicate$ -- 2389
+empty$ -- 2233
 format.name$ -- 448
-if$ -- 5019
+if$ -- 5012
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 279
@@ -50,10 +50,10 @@ pop$ -- 610
 preamble$ -- 1
 purify$ -- 176
 quote$ -- 0
-skip$ -- 625
+skip$ -- 626
 stack$ -- 0
-substring$ -- 1539
-swap$ -- 1198
+substring$ -- 1535
+swap$ -- 1196
 text.length$ -- 39
 text.prefix$ -- 0
 top$ -- 0

@@ -19,7 +19,7 @@
     \usepackage[math-style=TeX,
                 bold-style=TeX,
                ]{unicode-math}
-    \setmainfont{Times New Roman}%........................ Unicode fonts  (Win)                
+    \setmainfont{Times New Roman}%........................ Unicode fonts  (Win)
     \setsansfont[Scale=MatchLowercase]{Calibri}
     \setmonofont[Scale=MatchLowercase]{Consolas}
     \setmathfont{Cambria Math}
@@ -29,6 +29,8 @@
     \usepackage[utf8]{inputenc}%.................. Unicode file format
     \usepackage{textcomp}%........................ Additional text symbols
     \usepackage[T1]{fontenc}%..................... Type 1 outline fonts
+    % Use Times (newtx) as a pdfLaTeX fallback for Times New Roman
+    \usepackage{newtxtext,newtxmath}
     \usepackage{bm}%.............................. Bold math fonts
 \fi
 \normalfont
@@ -94,6 +96,7 @@
 \usepackage[table]{xcolor}
 \usepackage{ragged2e}
 \usepackage{caption}
+\usepackage{placeins}
 
 \renewcommand{\@makechapterhead}[1]{%
   \vspace*{-40pt}% <-- move chapter heading up (adjust if needed)
