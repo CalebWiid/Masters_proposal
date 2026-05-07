@@ -26,10 +26,10 @@
 \contentsline {subsection}{\numberline {2.4.1}ToF Camera in Moving Vehicle}{17}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}One-shot Gesture Recognition Framework}{19}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Few-Shot Learning Vision-based Hand Gesture Recognition}{20}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}EMG sensors}{21}{subsection.2.4.4}%
-\contentsline {chapter}{\numberline {3}Workplan}{22}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Project Schedule}{25}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Risk Assessment}{28}{chapter.5}%
-\contentsline {chapter}{List of references}{31}{section*.26}%
+\contentsline {subsection}{\numberline {2.4.4}Neural Bands}{21}{subsection.2.4.4}%
+\contentsline {chapter}{\numberline {3}Workplan}{23}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Project Schedule}{26}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Risk Assessment}{29}{chapter.5}%
+\contentsline {chapter}{List of references}{32}{section*.28}%
 \babel@toc {english}{}\relax 
 \babel@toc {UKenglish}{}\relax 

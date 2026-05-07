@@ -312,5 +312,41 @@ Following on from this research, \cite{Shahi2024} developed a system that also l
 
 \cite{Shahi2024} evaluated the  system through a user study involving 21 participants and 20 gesture classes. The results showed an average accuracy of 95~\% with only one demonstration per gesture. This shows that the system outperforms baseline approaches such as fine-tuning, nearest neighbours and random forest classifiers. Additionally, the authors demonstrate the practicallity of their approach via three real-wolrd applications, including a gesture design tool, gesture-based productivity interfaces, and mixed reality interaction systems.  
 
-\subsection{EMG sensors}
-One final advancement worth noting is that use of electromyography (EMG) sensors for gesture recognition. 
+\subsection{Neural Bands}
+One final advancement worth noting is that use of neural bands. These neural bands are made up of electromyography (EMG) sensors that are mounted on a wrist and are used to sense the electrical signals of a persons muscles. 
+
+\cite{kaifosh2025} developed a wristband-based system that translates muscle electrical signals into computer commands, offering a hands-free input method that does not require any device to be held or touched. Unlike existing high-performance brain-computer interfaces, which require invasive brain surgery and are calibrated specifically for each individual user, this system is designed to work across a broad population without user-specific setup. The wristband captures electrical signals produced by the muscles of the forearm and wrist, which reflect the movement commands sent by the brain, and converts these into computer inputs in real time. Figure \ref{fig:Neural_Band_Design} show the design of the nerual band \citep{kaifosh2025}. 
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[scale=0.85]{figs/Neural_band.png}
+    \caption{Neural Band Design}
+    \label{fig:Neural_Band_Design}
+\end{figure}
+
+A key achievement of the study is that the system generalises across users without individual calibration. This was made possible by collecting training data from thousands of participants and using this data to train neural network models capable of recognising movement patterns across diverse individuals. The authors found that model performance improved predictably as more training data and larger models were used, a pattern consistent with findings in other large-scale machine learning domains such as language modelling.
+
+The system was tested in live use scenarios, where new users with no prior experience achieved handwriting speeds of 20.9 words per minute and could reliably detect discrete finger gestures at a rate of 0.88 per second. The authors also showed that a brief 20-minute personalisation session could improve handwriting accuracy by a further 16~\%, particularly for users who initially struggled with the generic model. The authors suggest this type of interface could benefit both everyday mobile computing and assistive technology applications for individuals with limited motor function.
+
+A numebr of companies have since developed similar products, most notably, Meta \citep{MetaEMGWearable} and Mudra Wearables Inc \citep{MudraBand}. The neural band developed by Meta is used to allow users to control the Meta Ray-Band display as well as the Orion ecosystems \citep{MetaEMGWearable}. On the other hand, the Mudra band was designed for a more general perpose. This band allows users to control a wide range of devices such as computers and smart TV's, and can eliminate the need for a mouse, keyboard or touchscreen \citep{MudraBand}. Both the Meta band and the Mudra band can be seen in Figure \ref{fig:combined_neural_bands}.
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/Meta_band.png}
+        \caption{Meta's Neural Band}
+        \label{fig:meta_band}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/mudra_band.png}
+        \caption{Mudra's Neural Band}
+        \label{fig:mudra_band}
+    \end{subfigure}
+
+    \caption{Currently Available Commercial Neural Bands}
+    \label{fig:combined_neural_bands}
+\end{figure}
