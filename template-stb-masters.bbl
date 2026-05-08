@@ -19,16 +19,10 @@
 \newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[{Int(2017)}]{International_journal_of_engineering_research_2017}
- (2017).
-\newblock Gesture-based {{Flying Robot}} for {{Precision Agriculture}}.
-\newblock \emph{International Journal of Engineering Research}, \bblvol{}~5,
-  \bblno{}~06.
-
-\bibitem[{\citenamefont{{Anuja Phapale}} \protect\BIBand{}
-  \citenamefont{{Shriya Sawashe}}(2024)}]{Anjua2024}
-\bibnamefont{{Anuja Phapale}} \protect\BIBand{} \bibnamefont{{Shriya Sawashe}}
-  (2024 \bbljan{}).
+\bibitem[{\citenamefont{Anuja} \protect\BIBand{}
+  \citenamefont{Shriya}(2024)}]{Anjua2024}
+\bibnamefont{Anuja}, \bibfnamefont{P.} \protect\BIBand{} \bibnamefont{Shriya},
+  \bibfnamefont{S.} (2024 \bbljan{}).
 \newblock {{3D Motion Gesture Control}} : {{Gesture Recognition}} and
   {{Adaptation}} for {{Human Computer Interaction}}.
 \newblock \emph{International Journal of Applied and Advanced Multidisciplinary
@@ -61,6 +55,18 @@
   Conference}} on {{Automatic Face}} \& {{Gesture Recognition}} ({{FG}} 2017)},
   \bblpp{} 784--789. IEEE, Washington, DC, DC, USA.
 \newblock ISBN 978-1-5090-4023-0.
+
+\bibitem[{\citenamefont{Chandan} \emph{\bbletal{}}(2017)\citenamefont{Chandan},
+  \citenamefont{{Ankitha Jain}}, \citenamefont{Roja}, \citenamefont{Vivek}
+  \protect\BIBand{}
+  \citenamefont{Shubha}}]{International_journal_of_engineering_research_2017}
+\bibnamefont{Chandan}, \bibfnamefont{H.S.}, \bibnamefont{{Ankitha Jain}},
+  \bibfnamefont{M.B.}, \bibnamefont{Roja}, \bibfnamefont{K.N.},
+  \bibnamefont{Vivek}, \bibfnamefont{B.P.} \protect\BIBand{}
+  \bibnamefont{Shubha}, \bibfnamefont{C.} (2017).
+\newblock Gesture-based {{Flying Robot}} for {{Precision Agriculture}}.
+\newblock \emph{International Journal of Engineering Research}, \bblvol{}~5,
+  \bblno{}~06.
 
 \bibitem[{\citenamefont{{DJI}}(2026)}]{DJI_Neo2_Manual}
 \bibnamefont{{DJI}} (2026).

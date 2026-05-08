@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99e
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: template-stb-masters.aux
 Reallocating 'name_of_file' (item size: 1) to 14 items.
@@ -18,49 +18,47 @@ A level-1 auxiliary file: chaps-main/chap-risk_assessment.aux
 Reallocating 'name_of_file' (item size: 1) to 22 items.
 Database file #1: bib/bib-reference.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-Warning--to sort, need author or key in International_journal_of_engineering_research_2017
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Warning--empty author in International_journal_of_engineering_research_2017
 Warning--empty journal in kaifosh2025
 You've used 28 entries,
             3324 wiz_defined-function locations,
-            852 strings with 11661 characters,
-and the built_in function-call counts, 26302 in all, are:
-= -- 2091
-> -- 694
+            853 strings with 11747 characters,
+and the built_in function-call counts, 27072 in all, are:
+= -- 2154
+> -- 736
 < -- 55
-+ -- 276
-- -- 240
-* -- 2510
-:= -- 3225
++ -- 291
+- -- 255
+* -- 2615
+:= -- 3319
 add.period$ -- 102
 call.type$ -- 28
-change.case$ -- 220
+change.case$ -- 225
 chr.to.int$ -- 28
-cite$ -- 33
-duplicate$ -- 2558
-empty$ -- 2398
-format.name$ -- 475
-if$ -- 5380
+cite$ -- 29
+duplicate$ -- 2642
+empty$ -- 2454
+format.name$ -- 503
+if$ -- 5528
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 300
+missing$ -- 305
 newline$ -- 182
-num.names$ -- 108
-pop$ -- 663
+num.names$ -- 112
+pop$ -- 676
 preamble$ -- 1
-purify$ -- 192
+purify$ -- 197
 quote$ -- 0
-skip$ -- 687
+skip$ -- 684
 stack$ -- 0
-substring$ -- 1640
-swap$ -- 1271
+substring$ -- 1690
+swap$ -- 1309
 text.length$ -- 42
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 252
-warning$ -- 3
-while$ -- 233
+warning$ -- 1
+while$ -- 241
 width$ -- 0
-write$ -- 413
-(There were 3 warnings)
+write$ -- 414
+(There was 1 warning)

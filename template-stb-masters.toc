@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {2.2.2}Skywriter HAT sensor}{8}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}LEAP Motion Sensor}{8}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Microsoft Kinect}{9}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Googles MediaPipe Hands}{12}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.5}Google's MediaPipe Hands}{12}{subsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.2.6}DJI Neo 2}{14}{subsection.2.2.6}%
 \contentsline {section}{\numberline {2.3}Gesture Classification Techniques}{16}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Traditional Methods}{16}{subsection.2.3.1}%
@@ -27,9 +27,9 @@
 \contentsline {subsection}{\numberline {2.4.2}One-shot Gesture Recognition Framework}{19}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Few-Shot Learning Vision-based Hand Gesture Recognition}{20}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Neural Bands}{21}{subsection.2.4.4}%
-\contentsline {chapter}{\numberline {3}Workplan}{23}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Project Schedule}{26}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Risk Assessment}{29}{chapter.5}%
-\contentsline {chapter}{List of references}{32}{section*.28}%
+\contentsline {chapter}{\numberline {3}Workplan}{24}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Project Schedule}{27}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Risk Assessment}{30}{chapter.5}%
+\contentsline {chapter}{List of references}{33}{section*.28}%
 \babel@toc {english}{}\relax 
 \babel@toc {UKenglish}{}\relax 
